@@ -1,0 +1,101 @@
+<table id="month_1" class="calendar">
+    <caption>Март 2018</caption>
+    <thead>
+        <tr>
+            <th class="DayOfWeek">Вс</th>
+            <th class="DayOfWeek">Пн</th>
+            <th class="DayOfWeek">Вт</th>
+            <th class="DayOfWeek">Ср</th>
+            <th class="DayOfWeek">Чт</th>
+            <th class="DayOfWeek">Пт</th>
+            <th class="DayOfWeek">Сб</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+</table>
+
+<table id="month_2" class="calendar">
+    <caption>Март 2018</caption>
+    <thead>
+        <tr>
+            <th class="DayOfWeek">Вс</th>
+            <th class="DayOfWeek">Пн</th>
+            <th class="DayOfWeek">Вт</th>
+            <th class="DayOfWeek">Ср</th>
+            <th class="DayOfWeek">Чт</th>
+            <th class="DayOfWeek">Пт</th>
+            <th class="DayOfWeek">Сб</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+</table>
+
+<table id="month_3" class="calendar">
+    <caption>Март 2018</caption>
+    <thead>
+        <tr>
+            <th class="DayOfWeek">Вс</th>
+            <th class="DayOfWeek">Пн</th>
+            <th class="DayOfWeek">Вт</th>
+            <th class="DayOfWeek">Ср</th>
+            <th class="DayOfWeek">Чт</th>
+            <th class="DayOfWeek">Пт</th>
+            <th class="DayOfWeek">Сб</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    function load_table(par,elem){
+        var local_date = new Date();
+        local_date.setMonth(now.getMonth()+par);
+        var month_mass = ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
+        var month_now_str = month_mass[local_date.getMonth()] + ' ' + local_date.getFullYear();
+        
+        var caption = document.getElementById(elem).getElementsByTagName('caption')[0];
+        var tbody   = document.getElementById(elem).getElementsByTagName('tbody')[0];
+        
+        caption.textContent = month_now_str;
+        
+        local_date.setDate(1);
+        var day_of_week = local_date.getDay();
+        
+        var month_now = local_date.getMonth();
+        
+        while(local_date.getMonth() == month_now){
+            var local_week = document.createElement('tr');
+            for(var i=0; i<=6; i++){
+                var local_day = document.createElement('td');
+                if (i==day_of_week){
+                    local_day.textContent = local_date.getDate();
+                    if (local_date == now){
+                        local_day.className = 'current_day';
+                    } 
+                    local_date.setDate(local_date.getDate()+1);
+                    day_of_week = local_date.getDay();
+                    if(local_date.getMonth() != month_now){
+                        break;
+                    }
+                } 
+                local_week.appendChild(local_day);
+            }
+        
+            tbody.appendChild(local_week);
+        }
+    }
+    
+    
+    
+    var now = new Date();
+    //заполним таблицы
+    load_table(-1,'month_1');
+    load_table(0,'month_2');
+    load_table(1,'month_3');
+</script>
