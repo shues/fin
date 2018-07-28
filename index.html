@@ -3,15 +3,34 @@
     <head>
         <meta charset="utf-8">
         <link href="main.css" rel="stylesheet">
+        <script type="text/javascript" src="calendar.js"></script>
     </head>
-    <body>
+    <body onload="create_calendar_window();">
         <div id="main_menu" class="menu">
             <button id="monitor">Мониторинг</button>
             <button id="planning">Планирование</button>
             <button id="reports">Отчеты</button>
         </div>
         
-        <div id="page_content">
+        <div id="calendar_panel">
+            <table id="month_table" class="invisible_pattern" >
+                <caption>Март 2018</caption>
+                    <thead>
+                        <tr>
+                            <th class="DayOfWeek">Вс</th>
+                            <th class="DayOfWeek">Пн</th>
+                            <th class="DayOfWeek">Вт</th>
+                            <th class="DayOfWeek">Ср</th>
+                            <th class="DayOfWeek">Чт</th>
+                            <th class="DayOfWeek">Пт</th>
+                            <th class="DayOfWeek">Сб</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+            </table>
+            
         </div>
     </body>
 </html>

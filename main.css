@@ -6,3 +6,26 @@ body{
 .menu{
     background-color: lightgray;
 }
+
+.invisible_pattern{
+    display: none;
+}
+
+.calendar{
+    display: inline-block;
+    margin: 20px;
+}
+
+.DayOfWeek{
+    width: 25px;
+}
+
+#calendar_panel{
+    height: 200px;
+    background-color: antiquewhite;
+    overflow-x: scroll;
+}
+
+.current{
+    font-weight: bold;
+}
