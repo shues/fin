@@ -4,13 +4,12 @@
         <meta charset="utf-8">
         <link href="main.css" rel="stylesheet">
         <script type="text/javascript" src="calendar.js"></script>
+        <script type="text/javascript" src="chack.js"></script>
+        <script type="text/javascript" src="ajax.js"></script>
     </head>
     <body onload="create_calendar_window();">
-        <div id="main_menu" class="menu">
-            <button id="monitor">Мониторинг</button>
-            <button id="planning">Планирование</button>
-            <button id="reports">Отчеты</button>
-        </div>
+        <!--<div id="main_menu" class="menu">
+        </div>-->
         
         <div id="calendar_panel">
             <table id="month_table" class="invisible_pattern" >
@@ -29,8 +28,46 @@
                     <tbody>
 
                     </tbody>
+            </table>            
+        </div>
+        
+        <div id="example_check" class="chack">
+            <p>
+                <span class="chack_contragent" onclick="change_contragent(this);" >Ярче</span>
+                <br>
+                <span class="chack_data" onclick="change_data();">25-11-2018</span>
+            </p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th class="col_70_proc">Услуга</th>
+                        <th class="col_30_proc">Цена</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Батон</td>
+                        <td>25,20</td>
+                    </tr>
+                </tbody>
             </table>
             
+            <span class="chack_sum">Итог:</span>
+            
+        </div>
+        
+        <div id="tools" class="menu">
+            <p>
+                <span id="monitor">Мониторинг</span>
+                <br>
+                <span id="planning">Планирование</span>
+                <br>
+                <span id="reports">Отчеты</span>
+            </p>
+            <p>
+                <span id="new_check" >Новый чек</span>
+            </p>            
         </div>
     </body>
 </html>

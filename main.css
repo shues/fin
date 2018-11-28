@@ -4,7 +4,29 @@ body{
 }
 
 .menu{
-    background-color: lightgray;
+    background-color: antiquewhite;
+    padding-right: 10px;    
+}
+
+.menu span{
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+
+#main_menu{
+    text-align: right;
+    height: 30px;
+    line-height: 30px;
+}
+
+#tools{
+    display: inline-block;
+    float: right;
+    width: 200px;
+    text-align: left;
+    padding-left: 20px;
+    height: 100vh;
 }
 
 .invisible_pattern{
@@ -12,7 +34,7 @@ body{
 }
 
 .calendar{
-    display: inline-block;
+    display: block;
     margin: 20px;
 }
 
@@ -20,12 +42,70 @@ body{
     width: 25px;
 }
 
+td{
+    cursor: pointer;
+}
+
 #calendar_panel{
-    height: 200px;
+/*    height: 200px;*/
+    height: 100vh;
     background-color: antiquewhite;
-    overflow-x: scroll;
+/*    overflow-x: scroll;*/
+    display: inline-block;
+    float: left;
 }
 
 .current{
     font-weight: bold;
+    color: red;
+}
+
+.chack{
+    display: inline-block;
+    width: 200px;
+    background-color:beige;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+.chack *{
+    cursor: pointer;
+}
+
+.chack table{
+    width: 100%;
+}
+
+.chack th{
+    border-bottom: 1px solid gray;
+}
+
+.chack p{
+    text-align: center;
+}
+
+.chack_sum{
+    text-align: left;
+}
+
+.chack_contragent{
+    font-weight: bold;
+
+}
+
+.chack_date{
+    display: inline-block;
+    float: right;
+}
+.chack_sum{
+    font-weight: bold;
+}
+
+.col_70_proc{
+    width: 70%;
+}
+
+.col_30_proc{
+    width: 30%;
 }
